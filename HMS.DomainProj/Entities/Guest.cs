@@ -9,15 +9,13 @@ namespace HMS.DomainProj.Entities
     public class Guest
     {
         public int Id { get; set; }
-
         public string FirstName { get; set; } = null!;
-
         public string LastName { get; set; } = null!;
+        public string PersonalNumber { get; set; } = null!; // unique
+        public string PhoneNumber { get; set; } = null!;    // unique
 
-        public string PersonalNumber { get; set; } = null!;
-
-        public string PhoneNumber { get; set; } = null!;
-
-        public ICollection<Reservation> Reservations { get; set; } = new List<Reservation>();
+        // JWT fields
+        public string PasswordHash { get; set; } = null!;
+        public string Role { get; set; } = "Guest"; // default role
     }
 }

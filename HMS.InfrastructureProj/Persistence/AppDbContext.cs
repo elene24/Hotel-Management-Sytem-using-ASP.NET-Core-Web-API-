@@ -40,6 +40,12 @@ namespace HMS.InfrastructureProj.Persistence
             modelBuilder.Entity<Room>()
                 .Property(r => r.Price)
                 .HasPrecision(18, 2);
+
+            modelBuilder.Entity<Manager>()
+                .HasOne(m => m.Hotel)
+                .WithMany(h => h.Managers)
+                .HasForeignKey(m => m.HotelId)
+                .IsRequired(false);
         }
     }
 }
