@@ -1,0 +1,25 @@
+# Visual Studio temporary files, build results, and user-specific files
+.vs/
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider IDE files (optional)
+.idea/
+
+# NuGet packages
+*.nupkg
+packages/
+*.snupkg
+
+# ASP.NET Core / general
+appsettings.*.json
+.env
+*.db
+*.log
+
+# Node/npm (if using front-end stuff)
+node_modules/
